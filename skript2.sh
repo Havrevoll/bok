@@ -6,6 +6,13 @@
 
 base=$1
 
+
+# kanskje må dei roterast? Og delast i to, om dei er skanna?
+#  for f in ein*.jpg; do jpegtran -rotate 90 -outfile r$f $f; done
+#  jbig2 -s -p -v re*.jpg && ~/jbig2enc/pdf.py output >out.pdf
+# ocrmypdf --output-type pdf out.pdf out2.pdf
+
+
 # parallel 'convert {} -crop 1440x1482+0+575 +repage -brightness-contrast -10x10 -threshold 80% -monochrome -compress Group4 {.}.tiff' ::: *.png
 
 for fil in $base*.png; do
