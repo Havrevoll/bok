@@ -1,3 +1,4 @@
+mutool merge -o file.pdf $(find . -maxdepth 1 -name "ebscohost*" | sort -n)
 mutool clean -ggg -d -a -s file.pdf file2.pdf
 qpdf file2.pdf --qdf file2.qdf
 perl -pi.bak -e 's/<94[0-9a-f]{20,}>/<9405>/g' file2.qdf
